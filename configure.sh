@@ -25,7 +25,7 @@ fi
 # Check python version compatibility:
 export LARCV_PYTHON_CONFIG=python-config
 LARCV_PYVERSION=3
-export LARCV_PYTHON=`which python3.8`
+export LARCV_PYTHON=`which python3`
 #export LARCV_PYTHON=`which python`
 #if [ `command -v python` ]; then
 #    LARCV_PYVERSION=$($LARCV_PYTHON -c "import sys; print(sys.version_info.major)")
