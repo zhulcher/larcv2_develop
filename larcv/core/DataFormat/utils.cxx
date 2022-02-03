@@ -111,10 +111,10 @@ void PCA_3D::_fit(double **coords, size_t n, bool store_spread)
     
   // fill eigenvectors with descending eigenvalues
   _components.reserve(3);
-  double eig_val[3];
+  //double eig_val[3];
   for (size_t i = 0; i < 3; ++i){
     size_t ii = idx[i];
-    eig_val[i] = ev[ii];
+    //eig_val[i] = ev[ii];
     std::vector<double> vec(3);
     for (size_t j = 0; j < 3; ++j)
       vec[j] = vh[j][ii]; // transpose of vh sorted by eigenvalue
