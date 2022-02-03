@@ -29,6 +29,13 @@ namespace larcv {
 
     Point2D(const Point2D& pt) : x(pt.x), y(pt.y) {};
 
+    // Point2D &operator=(Point2D other)
+    // {
+    //   std::swap(x, other.x);
+    //   std::swap(y, other.y);
+    //   return *this;
+    // }
+
     double x, y;
     
     inline bool operator== (const Point2D& rhs) const
@@ -73,6 +80,14 @@ namespace larcv {
     ~Point3D() {}
 
     Point3D(const Point3D& pt) : x(pt.x), y(pt.y), z(pt.z) {}
+
+    //Point3D &operator=(Point3D other)
+    // {
+    //   std::swap(x, other.x);
+    //   std::swap(y, other.y);
+    //   std::swap(z, other.z);
+    //   return *this;
+    // }
 
     double x, y, z;
     
