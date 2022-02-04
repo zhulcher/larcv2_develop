@@ -22,10 +22,8 @@ endif
 
 ifndef LARCV_EDEPSIM_LIBS
 APP_SUBDIRS := Filter ImageAna ImageMod SBNDImageMod ThreadIO #NextImageMod #Merger
-	@echo Supera not Added!
 else
 APP_SUBDIRS := Filter ImageAna ImageMod SBNDImageMod ThreadIO Supera #NextImageMod #Merger
-	@echo Supera Added!
 endif
 
 .phony: all clean
@@ -42,6 +40,7 @@ clean_app:
 obj:
 	@echo
 	@echo Building core...
+	@echo $(LARCV_EDEPSIM_LIBS)
 	@echo
 	@for i in $(CORE_SUBDIRS); do ( echo "" && echo "Compiling $$i..." && cd $(LARCV_COREDIR)/$$i && $(MAKE) ) || exit $$?; done
 	@echo Building app...
