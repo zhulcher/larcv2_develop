@@ -51,6 +51,8 @@ else
     echo -e "\033[93mWarning\033[00m ... missing edep-sim support.  Supera modules may not run."
 fi
 
+echo $LARCV_EDEPSIM_LIBS
+
 export LARCV_COREDIR=$LARCV_BASEDIR/larcv/core
 export LARCV_APPDIR=$LARCV_BASEDIR/larcv/app
 export LARCV_LIBDIR=$LARCV_BUILDDIR/lib
