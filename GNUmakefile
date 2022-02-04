@@ -24,7 +24,7 @@ ifndef LARCV_EDEPSIM_LIBS
 	APP_SUBDIRS := Filter ImageAna ImageMod SBNDImageMod ThreadIO #NextImageMod #Merger
 	@echo Supera not Added!
 else
-A	PP_SUBDIRS := Filter ImageAna ImageMod SBNDImageMod ThreadIO Supera #NextImageMod #Merger
+	APP_SUBDIRS := Filter ImageAna ImageMod SBNDImageMod ThreadIO Supera #NextImageMod #Merger
 	@echo Supera Added!
 endif
 
