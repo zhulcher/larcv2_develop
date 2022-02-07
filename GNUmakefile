@@ -20,11 +20,8 @@ ifeq ($(LARCV_OPENCV),1)
   CORE_SUBDIRS += CVUtil
 endif
 
-ifndef LARCV_EDEPSIM_LIBS
-APP_SUBDIRS := Filter ImageAna ImageMod SBNDImageMod ThreadIO #NextImageMod #Merger
-else
-APP_SUBDIRS := Filter ImageAna ImageMod SBNDImageMod ThreadIO Supera #NextImageMod #Merger
-endif
+
+APP_SUBDIRS := Supera Filter ImageAna ImageMod SBNDImageMod ThreadIO  #NextImageMod #Merger
 
 .phony: all clean
 
