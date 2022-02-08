@@ -16,6 +16,7 @@
 
 #include "larcv/core/Base/Watch.h"
 #include "larcv/core/DataFormat/IOManager.h"
+#include "larcv/core/PyUtil/PyUtils.h"
 #include "ProcessorTypes.h"
 namespace larcv {
 
