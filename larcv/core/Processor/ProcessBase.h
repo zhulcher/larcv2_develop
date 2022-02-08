@@ -70,6 +70,8 @@ namespace larcv {
     bool event_creator() const
     { return _event_creator; }
 
+    void SetEvent(PyObject *ev) { std::cout << "Wrong Base" << std::endl; };
+
   private:
 
     void _configure_(const PSet&);
