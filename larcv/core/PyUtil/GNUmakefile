@@ -23,6 +23,11 @@ OSNAMEMODE      = $(OSNAME)
 
 include $(LARCV_BASEDIR)/Makefile/Makefile.${OSNAME}
 
+ifdef LARCV_EDEPSIM_INCLUDES
+INCFLAGS += $(LARCV_EDEPSIM_INCLUDES)
+LDFLAGS  += $(LARCV_EDEPSIM_LIBS)
+endif
+
 LDFLAGS += -L$(shell ${LARCV_PYTHON_CONFIG} --prefix)/lib/
 LDFLAGS += $(shell ${LARCV_PYTHON_CONFIG} --ldflags)
 
