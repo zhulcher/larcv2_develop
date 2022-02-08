@@ -27,6 +27,11 @@ OSNAME          = $(shell uname -s)
 HOST            = $(shell uname -n)
 OSNAMEMODE      = $(OSNAME)
 
+ifdef LARCV_EDEPSIM_INCLUDES
+INCFLAGS += $(LARCV_EDEPSIM_INCLUDES)
+LDFLAGS  += $(LARCV_EDEPSIM_LIBS)
+endif
+
 include $(LARCV_BASEDIR)/Makefile/Makefile.${OSNAME}
 
 LDFLAGS += $(shell larcv-config --libs)
