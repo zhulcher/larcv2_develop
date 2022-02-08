@@ -20,6 +20,11 @@ OSNAMEMODE      = $(OSNAME)
 
 include $(LARCV_BASEDIR)/Makefile/Makefile.${OSNAME}
 
+ifdef LARCV_EDEPSIM_INCLUDES
+INCFLAGS += $(LARCV_EDEPSIM_INCLUDES)
+LDFLAGS  += $(LARCV_EDEPSIM_LIBS)
+endif
+
 LDFLAGS += $(shell larcv-config --libs) 
 # call the common GNUmakefile
 include $(LARCV_BASEDIR)/Makefile/GNUmakefile.CORE
