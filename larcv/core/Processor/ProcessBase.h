@@ -17,6 +17,7 @@
 #include "larcv/core/Base/Watch.h"
 #include "larcv/core/DataFormat/IOManager.h"
 #include "ProcessorTypes.h"
+#include "EDepSim/TG4Event.h"
 
 struct _object;
 typedef _object PyObject;
@@ -73,7 +74,7 @@ namespace larcv {
     bool event_creator() const
     { return _event_creator; }
 
-    void SetEvent(PyObject *ev) { std::cout << "Wrong Base" << std::endl; };
+    void SetEvent(const TG4Event *ev) { std::cout << "Wrong Base" << std::endl; };
 
   private:
 
