@@ -19,8 +19,6 @@
 #include "ProcessorTypes.h"
 #include "EDepSim/TG4Event.h"
 
-struct _object;
-typedef _object PyObject;
 namespace larcv {
 
   class ProcessDriver;
@@ -74,7 +72,11 @@ namespace larcv {
     bool event_creator() const
     { return _event_creator; }
 
-    void SetEvent(const TG4Event *ev) { std::cout << "Wrong Base" << std::endl; };
+    void SetEvent(const TG4Event *ev) 
+    {
+      (void)ev;
+      std::cout << "Wrong Base" << std::endl; 
+    };
 
   private:
 

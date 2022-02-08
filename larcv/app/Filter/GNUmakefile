@@ -20,6 +20,11 @@ OSNAMEMODE      = $(OSNAME)
 
 include $(LARCV_BASEDIR)/Makefile/Makefile.${OSNAME}
 
+ifdef LARCV_EDEPSIM_INCLUDES
+INCFLAGS += $(LARCV_EDEPSIM_INCLUDES)
+LDFLAGS  += $(LARCV_EDEPSIM_LIBS)
+endif
+
 LDFLAGS += $(shell larcv-config --libs)
 #LDFLAGS += -L$(LARCV_LIBDIR) -lLArCVBase -lLArCVDataFormat -lLArCVProcessor
 
