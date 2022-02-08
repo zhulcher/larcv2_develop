@@ -16,8 +16,10 @@
 
 #include "larcv/core/Base/Watch.h"
 #include "larcv/core/DataFormat/IOManager.h"
-#include "larcv/core/PyUtil/PyUtils.h"
 #include "ProcessorTypes.h"
+
+struct _object;
+typedef _object PyObject;
 namespace larcv {
 
   class ProcessDriver;
